@@ -1,115 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi primera página web</title>
 
-  <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #023e8a;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Mi Página Personal</h1>
-  </header>
+    <!-- Encabezado -->
+    <header>
+        <h1>Mi Página Web</h1>
+        <p>Bienvenido a mi sitio personal</p>
+    </header>
 
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#pec">Proyecto PEC</a>
-  </nav>
+    <!-- Menú -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+    </nav>
 
-  <button id="theme-toggle">Cambiar modo</button>
+    <!-- Contenido principal -->
+    <section>
+        <h2>Sobre mí</h2>
+        <p>
+            Hola, mi nombre es Oscar y estoy aprendiendo
+            desarrollo web con HTML, CSS y JavaScript.
+        </p>
+    </section>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
+    <section>
+        <h2>Mis proyectos</h2>
+        <p>
+            Aquí podrás ver algunos proyectos escolares
+            y personales.
+        </p>
+    </section>
 
-    <p id="mensaje2" style="display: none;"></p>
-
-    <button onclick="mostrarMensaje2()">
-      Mostrar mensaje
-    </button>
-
-    <br><br>
-
-    <img
-      src="img/perrito 1.jpg"
-      alt="Foto personal"
-      width="200"
-      height="200"
-    />
-
-    <p>Hola, mi nombre es Oscar.</p>
-    <p>Soy estudiante en el CECYCTEO EMSAD-35.</p>
-    <p>Me gusta el arte y aprender más sobre él.</p>
-  </section>
-
-  <section id="pec">
-    <h2>Proyecto Escolar Comunitario</h2>
-
-    <p id="mensaje" style="display: none;"></p>
-
-    <button onclick="mostrarMensaje()">
-      Mostrar mensaje
-    </button>
-
-    <br><br>
-
-    <h3>Huellas: cuidado animal y salud comunitaria</h3>
-
-    <img
-      src="img/perrito 2.jpg"
-      alt="Perro del proyecto Huellas"
-      width="300"
-    />
-
-    <p>
-      Este proyecto busca promover el cuidado responsable
-      de los perros en la comunidad de San Antonino el Alto.
-    </p>
-
-    <p>
-      La problemática principal es la presencia de perros
-      en la vía pública, muchos de ellos sin esterilizar
-      o sin vacunas.
-    </p>
-
-    <p>
-      A través de este proyecto se busca crear conciencia
-      sobre el bienestar animal y la salud comunitaria.
-    </p>
-  </section>
-
-  <footer>
-    <p>2026 - Mi nombre es Oscar</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function mostrarMensaje() {
-      const mensaje = document.getElementById("mensaje");
-
-      mensaje.style.display = "block";
-      mensaje.textContent =
-        "Gracias por interesarte en el Proyecto Escolar Comunitario.";
-    }
-
-    function mostrarMensaje2() {
-      const mensaje2 = document.getElementById("mensaje2");
-
-      mensaje2.style.display = "block";
-      mensaje2.textContent =
-        "Bienvenido a mi página personal.";
-    }
-
-    // Botón cambiar modo
-    const botonTema = document.getElementById("theme-toggle");
-
-    botonTema.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-  </script>
+    <!-- Pie de página -->
+    <footer>
+        <p>2026 - Página creada por Oscar</p>
+    </footer>
 
 </body>
+
 </html>
